@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProdutoService from '../../app/produtoService';
 import { withRouter } from 'react-router-dom';
+import Card from '../../components/card/card';
 
 const estadoInicial = {
     nome: '',
@@ -65,8 +66,8 @@ class CadastroProduto extends Component {
 
     render() {
         return (
-            <div className="card border-primary">
-                <div className="card-header">{this.state.isAtualizando ? 'Atualização ' : 'Cadastro '} de Produto</div>
+            <Card header={this.state.isAtualizando ? 'Atualização de produto' : 'Cadastro de produto'}>
+                <div className="card-header">{} de Produto</div>
 
                 <div className="card-body">
                         {this.state.isCadastrado &&
@@ -131,7 +132,7 @@ class CadastroProduto extends Component {
                             </div>
                         </div>
                 </div>
-            </div>
+            </ Card>
         )
     }
 }

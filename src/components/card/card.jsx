@@ -1,8 +1,8 @@
-import React from ' react';
+import React from 'react';
 
 export default (props) => {
     return (
-        <div className="card">
+        <div className="card border-primary">
             <div className="card-header">
                 {props.header}
             </div>
